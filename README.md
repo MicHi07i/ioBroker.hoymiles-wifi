@@ -17,46 +17,22 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 ### Getting started
 
 1) Visit https://github.com/suaveolent/hoymiles-wifi and install
+       ```bash
     $ pip install hoymiles-wifi
-
-   Please test if you can read data from your HMS using the IP address.
-   Please make sure your PATH variable is set, strangely on my Pi I had to use 'sudo pip install hoymiles-wifi'
-2) Please make sure your password of the access point of the HMS is complex.
-3) Install this adapter in ioBroker.
-4) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
-5) By default this adapter verifies IP address before running commands to keep CPU usage low, especisally when HMS is offline while night time.
-6) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
-7) Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
-8) Feel free to give me feedback.
-
-
+    ```
+   Please test if you can read data from your HMS using the IP address, run from your shell/command line.
+   Please make sure your PATH variable is set, (strangely on my Pi I had to use 'sudo pip install hoymiles-wifi').
+   I advise to make sure your password of the access point of the HMS is complex.
+2) Install this adapter in ioBroker.
+3) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
+4) By default this adapter verifies IP address before running commands to keep CPU usage low, especisally when HMS is offline while night time.
+5) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
+6) Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
+7) Feel free to give me feedback.
 
 
 
 ### Publishing the adapter
-Since you have chosen GitHub Actions as your CI service, you can 
-enable automatic releases on npm whenever you push a new git tag that matches the form 
-`v<major>.<minor>.<patch>`. The necessary steps are described in `.github/workflows/test-and-release.yml`.
-
-To get your adapter released in ioBroker, please refer to the documentation 
-of [ioBroker.repositories](https://github.com/ioBroker/ioBroker.repositories#requirements-for-adapter-to-get-added-to-the-latest-repository).
-
-### Test the adapter manually on a local ioBroker installation
-In order to install the adapter locally without publishing, the following steps are recommended:
-1. Create a tarball from your dev directory:  
-    ```bash
-    npm pack
-    ```
-1. Upload the resulting file to your ioBroker host
-1. Install it locally (The paths are different on Windows):
-    ```bash
-    cd /opt/iobroker
-    npm i /path/to/tarball.tgz
-    ```
-
-For later updates, the above procedure is not necessary. Just do the following:
-1. Overwrite the changed files in the adapter directory (`/opt/iobroker/node_modules/iobroker.hoymiles-wifi`)
-1. Execute `iobroker upload hoymiles-wifi` on the ioBroker host
 
 ## Changelog
 
