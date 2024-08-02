@@ -17,9 +17,9 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 ### Getting started
 
 1) Visit https://github.com/suaveolent/hoymiles-wifi and install
-       ```bash
+       `bash
     $ pip install hoymiles-wifi
-    ```
+    `.
    Please test if you can read data from your HMS using the IP address, run from your shell/command line.
    Please make sure your PATH variable is set, (strangely on my Pi I had to use 'sudo pip install hoymiles-wifi').
    I advise to make sure your password of the access point of the HMS is complex.
@@ -27,8 +27,9 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 3) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
 4) By default this adapter verifies IP address before running commands to keep CPU usage low, especisally when HMS is offline while night time.
 5) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
-6) Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
-7) Feel free to give me feedback.
+
+Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
+Feel free to give me feedback.
 
 
 
