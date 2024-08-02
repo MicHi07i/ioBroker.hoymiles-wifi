@@ -1,0 +1,173 @@
+<html>
+
+<head>
+
+    <!-- Load ioBroker scripts and styles-->
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+
+    <!-- Load our own files -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="words.js"></script>
+
+    <script type="text/javascript">
+        // This will be called by the admin adapter when the settings page loads
+        function load(settings, onChange) {
+            // example: select elements with id=key and class=value and insert value
+            if (!settings) return;
+            $('.value').each(function () {
+                var $key = $(this);
+                var id = $key.attr('id');
+                if ($key.attr('type') === 'checkbox') {
+                    // do not call onChange direct, because onChange could expect some arguments
+                    $key.prop('checked', settings[id])
+                        .on('change', () => onChange())
+                        ;
+                } else {
+                    // do not call onChange direct, because onChange could expect some arguments
+                    $key.val(settings[id])
+                        .on('change', () => onChange())
+                        .on('keyup', () => onChange())
+                        ;
+                }
+            });
+            onChange(false);
+            // reinitialize all the Materialize labels on the page if you are dynamically adding inputs:
+            if (M) M.updateTextFields();
+        }
+
+        // This will be called by the admin adapter when the user presses the save button
+        function save(callback) {
+            // example: select elements with class=value and build settings object
+            var obj = {};
+            $('.value').each(function () {
+                var $this = $(this);
+                if ($this.attr('type') === 'checkbox') {
+                    obj[$this.attr('id')] = $this.prop('checked');
+                } else {
+                    obj[$this.attr('id')] = $this.val();
+                }
+            });
+            callback(obj);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="m adapter-container">
+
+        <div class="row">
+            <div class="col s12 m4 l2">
+                <img src="hoymiles-wifi.png" class="logo">
+            </div>
+        </div>
+
+        <!-- Put your content here -->
+
+        <div class="row">
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="host" />
+                <label for="host" class="translate">Host (IP of HMS)</label>
+            </div>
+
+            <div class="col s6 input-field">
+                <input class="value" id="pollInterval" type="number" min="0" max="1000000"/>
+                <label for="pollInterval" class="translate">Polling interval (in seconds)</label>
+            </div>
+
+            <div class="col s6 input-field">
+                <input type="checkbox" class="value" id="skipPolling" />
+                <label for="skipPolling" class="translate">Skip polling while night time</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col s12 input-field">
+                <input type="text" class="value" id="Befehlszeile" />
+                <label for="Befehlszeile" class="translate">Command Line</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="Option1" />
+                <label for="Option1" class="translate">Option 1</label>
+            </div>
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="Option2" />
+                <label for="Option2" class="translate">Option 2</label>
+            </div>
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="Option3" />
+                <label for="Option3" class="translate">Option 3</label>
+            </div>
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="Option4" />
+                <label for="Option4" class="translate">Option 4</label>
+            </div>
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="Option5" />
+                <label for="Option5" class="translate">Option 5</label>
+            </div>
+
+<!-- 
+hoymiles-wifi [-h] --host HOST [--as-json] <command>
+
+commands:
+    get-real-data-new,
+    get-real-data-hms,
+    get-real-data,
+    get-config,
+    network-info,
+    app-information-data,
+    app-get-hist-power,
+    set-power-limit,
+    set-wifi,
+    firmware-update,
+    restart-dtu,
+    turn-on-inverter,
+    turn-off-inverter,
+    get-information-data,
+    get-version-info,
+    heartbeat,
+    identify-dtu,
+    identify-inverters
+-->
+        </div>
+        <div class="row">
+
+            <div class="col s6 input-field">
+                <input id="debugModeEnabled" type="checkbox" class="value" />
+                <span for="debugModeEnabled" class="translate">debugModeEnabled</span>
+            </div>
+
+        </div>
+<!-- formerly option to skip while calculated night time, when device has no IP and command runs into error
+        <div class="row">
+
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="latitude" />
+                <label for="latitude" class="translate">Latitude to calculate night time</label>
+            </div>
+
+            <div class="col s6 input-field">
+                <input type="text" class="value" id="longitude" />
+                <label for="longitude" class="translate">Longitude to calculate night time</label>
+            </div>
+        </div>
+-->
+
+    </div>
+
+</body>
+
+</html>

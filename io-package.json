@@ -1,0 +1,91 @@
+{
+    "common": {
+        "name": "hoymiles-wifi",
+        "version": "0.1.0",
+        "news": {
+            "0.1.0": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "hoymiles-wifi",
+        "titleLang": {
+            "en": "hoymiles-wifi",
+            "de": "hoymiles-wifi",
+            "ru": "Hoymiles-Wi-Fi",
+            "pt": "hoymiles-wi-fi",
+            "nl": "hoymiles-wifi",
+            "fr": "hoymiles-wifi",
+            "it": "hoymiles-wifi",
+            "es": "hoymiles-wifi",
+            "pl": "hoymiles-wifi",
+            "zh-cn": "Hoymiles-wifi"
+        },
+        "desc": {
+            "en": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages. Disclaimer: This library is not affiliated with Hoymiles. It is an independent project developed to provide tools for interacting with Hoymiles HMS-XXXXW-2T series micro-inverters featuring integrated WiFi DTU. Any trademarks or product names mentioned are the property of their respective owners. First, visit and install from https://github.com/suaveolent/hoymiles-wifi, make sure to adjust path so can run from command line.",
+            "de": "Kommunikation mit Hoymiles DTUs und den HMS-XXW-2T HMS Mikroinvertern, unter Verwendung von Protobuf-Nachrichten. Disclaimer: Dieser Adapter hat keine Verbindung zur Firmna Hoymiles. Es ist ein unabhängiges Projekt, entwickelt für die Interaktion mit Mikro-Inverter der Serie Hoymiles HMS-XXXXW-2T mit integriertem WLAN DTU, wie der HMS-800W-2T. Alle genannten Marken oder Produktnamen sind Eigentum ihrer jeweiligen Eigentümer. Bitte installieren Sie zuerst von https://github.com/suaveolent/hoymiles-wifi und stellen Sie sicher den Pfad so einzustellen, dass das Programm >hoymiles-wifi< von der Befehlszeile ausgeführt werden kann.",
+            "ru": "Связь с DTU Hoymiles и микроинверторами HMS-XXXXW-2T HMS, используя протобуф-сообщения. Отказ: Эта библиотека не связана с Hoymiles. Это независимый проект, разработанный для обеспечения инструментов для взаимодействия с микроинверторами серии Hoymiles HMS-XXXXW-2T с интегрированным Wi-Fi DTU. Любые упомянутые товарные знаки или названия продуктов являются собственностью их соответствующих владельцев. Во-первых, посетите и установите с https://github.com/suaveolent/hoymiles-wifi, обязательно корректируйте путь, чтобы можно было бежать из командной строки.",
+            "pt": "Comunicação com Hoymiles DTUs e os microinverters HMS-XXXXW-2T HMS, utilizando mensagens de protobuf. Disclaimer: Esta biblioteca não é afiliada com Hoymiles. É um projeto independente desenvolvido para fornecer ferramentas para interagir com Hoymiles HMS-XXXW-2T série micro-inverters com integrado WiFi DTU. Quaisquer marcas comerciais ou nomes de produtos mencionados são propriedade de seus respectivos proprietários. Primeiro, visite e instale a partir de https://github.com/suaveolent/hoymiles-wifi, certifique-se de ajustar o caminho para que possa ser executado a partir da linha de comando.",
+            "nl": "Communicatie met Hoymiles DTUs en de HMS-XXXXW-2T HMS micro-inverters, met behulp van protobuf berichten. Verklaring: Deze bibliotheek is niet verbonden met Hoymiles. Het is een onafhankelijk project ontwikkeld om tools te leveren voor interactie met Hoymiles HMS-XXXXW-2T serie micro-inverters met geïntegreerde WiFi DTU. Alle genoemde handelsmerken of productnamen zijn eigendom van hun respectieve eigenaren. Ga eerst naar en installeer vanaf https://github.com/suaveolent/hoymiles-wifi, zorg ervoor dat het pad wordt aangepast, zodat het vanaf de commandoregel kan worden uitgevoerd.",
+            "fr": "Communication avec les DTU de Hoymiles et les micro-invertisseurs HMS HMS-XXXXW-2T, en utilisant des messages protobuf. Avertissement : Cette bibliothèque n'est pas affiliée à Hoymiles. Il s'agit d'un projet indépendant conçu pour fournir des outils pour interagir avec les micro-onduleurs de la série Hoymiles HMS-XXXXW-2T dotés d'une connexion Wi-Fi intégrée. Toutes les marques de commerce ou noms de produits mentionnés sont la propriété de leurs propriétaires respectifs. Tout d'abord, visitez et installez https://github.com/suaveolent/hoymiles-wifi, assurez-vous d'ajuster le chemin afin de pouvoir courir depuis la ligne de commande.",
+            "it": "Comunicazione con Hoymiles DTUs e i microinverter HMS-XXXXW-2T HMS, utilizzando messaggi protobuf. Disclaimer: Questa biblioteca non è affiliata a Hoymiles. È un progetto indipendente sviluppato per fornire strumenti per interagire con i microinverter della serie Hoymiles HMS-XXXXW-2T dotati di DTU WiFi integrato. Eventuali marchi o nomi di prodotto menzionati sono di proprietà dei rispettivi proprietari. In primo luogo, visitare e installare da https://github.com/suaveolent/hoymiles-wifi, assicurarsi di regolare il percorso in modo che possa essere eseguito dalla riga di comando.",
+            "es": "Comunicación con los DTU de Hoymiles y los microinversionistas HMS HMS-XXXXW-2T, utilizando mensajes de protobuf. Descargo: Esta biblioteca no está afiliada a Hoymiles. Se trata de un proyecto independiente desarrollado para proporcionar herramientas para interactuar con los microinversionistas de la serie Hoymiles HMS-XXXXW-2T que ofrecen conexión WiFi integrada. Cualquier marca o nombre de producto mencionado son propiedad de sus respectivos propietarios. En primer lugar, visite e instale desde https://github.com/suaveolent/hoymiles-wifi, asegúrese de ajustar el camino para que pueda funcionar desde la línea de comandos.",
+            "pl": "Komunikacja z Hoymiles DTU i mikroinwerterami HMS- XXXXW- 2T HMS, przy wykorzystaniu komunikatów o protobufie. Zastrzeżenie: Ta biblioteka nie jest powiązana z Hoymiles. Jest to niezależny projekt opracowany w celu zapewnienia narzędzi do interakcji z HMS- XXXXW- 2T serii inwerterów z wbudowanym WiFi DTU. Wszelkie wymienione znaki towarowe lub nazwy produktów są własnością ich odpowiednich właścicieli. Po pierwsze, odwiedź i zainstaluj od https: / / github.com / suaveolent / hoymiles- wifi, upewnij się, aby dostosować ścieżkę, aby uruchomić z linii poleceń.",
+            "uk": "Зв'язок з Hoymiles DTUs і мікроінвертори HMS-XXXXW-2T HMS, використовуючи протобуф повідомлення. Відмова: Бібліотека не пов'язана з Hoymiles. Ми можемо самі зателефонувати одержувачу і узгодити зручний час і місце вручення квітів, а якщо необхідно, то збережемо сюрприз. Будь-які торгові марки або імена товарів, зазначені у власності їх відповідних власників. По-перше, відвідайте і встановіть з https://github.com/suaveolent/hoymiles-wifi, переконайтеся, що налаштування шляху так може працювати з командного рядка.",
+            "zh-cn": "利用原生电文与Hoymiles DTUs和HMS-XXW-2T HMS微反转器通信。 免责声明: 这个图书馆不附属于霍伊米勒斯. 它是一个独立项目,旨在提供与Hoymiles HMS-XXXXW-2T系列微型反转器进行互动的工具,其特点是集成WiFi DTU. 所提到的任何商标或产品名称均为各自的所有人的财产。 首先,从https://github.com/suaveolent/hoymiles-wifi访问和安装,确保调整路径,以便从命令行运行."
+        },
+        "authors": [
+            "MicHi07 <michi07@mein.gmx>"
+        ],
+        "keywords": [
+            "Hoymiles",
+            "DTU",
+            "HMS-XXXXW-2T",
+            "HMS-800W-2T"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "hoymiles-wifi.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
+        "readme": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "energy",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "host": "192.168.1.11",
+        "pollInterval": 60,
+        "skipPolling": true,
+        "Befehlszeile": "hoymiles-wifi --host $host --as-json $option",
+        "Option1": "get-real-data-new",
+        "Option2": "app-get-hist-power",
+        "Option3": "get-real-data",
+        "Option4": "",
+        "Option5": "",
+        "Befehlszeile1": "",
+        "Befehlszeile2": "",
+        "Befehlszeile3": "",
+        "Befehlszeile4": "",
+        "Befehlszeile5": "",
+        "debugModeEnabled": false
+    },
+    "objects": [],
+    "instanceObjects": []
+}
