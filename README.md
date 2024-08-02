@@ -38,6 +38,8 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 
 ### 0.1.0
 * (MicHi07i) initial release
+### 0.1.1
+* (MicHi07i) patch for silent run, adjusted debug info when IP is not pingable
 
 ## License
 MIT License
