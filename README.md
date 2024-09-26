@@ -19,17 +19,24 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 1) Visit https://github.com/suaveolent/hoymiles-wifi and install
        `bash
     $ pip install hoymiles-wifi
-    `.
-   Please test if you can read data from your HMS using the IP address, run from your shell/command line.
-   Please make sure your PATH variable is set, (strangely on my Pi I had to use 'sudo pip install hoymiles-wifi').
+    `. Under 64bit bookworm I had 'error: externally-managed-environment' and solved that with `bash
+    $ pip install hoymiles-wifi --break-system-packages
+    `
+   Please make sure your PATH variable is set, (e.g. `bash
+    $ export PATH="$HOME/.local/bin:$PATH"
+   `, I do not recomend on Pi to use 'sudo pip install hoymiles-wifi', but that does the trick, too).
+   Please test if you can read data from your HMS using the IP address, run from your shell/command line. e.g.
+    `bash
+    $ hoymiles-wifi --host 192.168.1.11 get-real-data-new
+    `
    I advise to make sure your password of the access point of the HMS is complex.
-2) Install this adapter in ioBroker.
+3) Install this adapter in ioBroker.
    To /usr/local/bin preferably if you can, at least add path to /etc/profile; else ioBroker will not find it.
    I do not recommend installing as root, although that does the trick, too.
 4) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
 5) By default this adapter verifies IP address before running commands to keep CPU usage low, especisally when HMS is offline while night time.
-   For that option, make sure you have command ping instaled and available, else please deactivate otion called 'Skip polling while night time'.
-6) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
+   For that option, make sure you have command ping instaled and available, else please deactivate otion called 'Skip polling while night time'.   
+7) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
 
 Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
 Feel free to give me feedback.
