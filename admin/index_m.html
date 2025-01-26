@@ -18,6 +18,27 @@
     <script type="text/javascript" src="words.js"></script>
 
     <script type="text/javascript">
+// ###
+$(function () {
+    // Initial verstecken
+    togglePingObject();
+
+    // Überwachen Sie Änderungen im Dropdown-Menü
+    $('#pull_option').on('change', function () {
+        togglePingObject();
+    });
+
+    function togglePingObject() {
+        const selectedOption = $('#pull_option').val();
+        if (selectedOption === 'pull_type2') {
+            $('#PingObject').closest('.col-use-PingObject').show();
+        } else {
+            $('#PingObject').closest('.col-use-PingObject').hide();
+        }
+    }
+});
+
+
         // This will be called by the admin adapter when the settings page loads
         function load(settings, onChange) {
             // example: select elements with id=key and class=value and insert value
@@ -60,7 +81,6 @@
     </script>
 
 </head>
-
 <body>
 
     <div class="m adapter-container">
@@ -76,22 +96,34 @@
         <div class="row">
             <div class="col s6 input-field">
                 <input type="text" class="value" id="host" />
-                <label for="host" class="translate">Host (IP of HMS)</label>
+                <label for="host" class="translate">host</label>
             </div>
 
             <div class="col s6 input-field">
-                <input class="value" id="pollInterval" type="number" min="0" max="1000000"/>
-                <label for="pollInterval" class="translate">Polling interval (in seconds)</label>
+                <input class="value" id="pullInterval" type="number" min="0" max="1000000"/>
+                <label for="pullInterval" class="translate">pullInterval</label>
             </div>
-
-            <div class="col s6 input-field">
-                <input type="checkbox" class="value" id="skipPolling" />
-                <label for="skipPolling" class="translate">Skip polling while night time</label>
-            </div>
-
         </div>
         <div class="row">
+            <!-- skipp pulling menu -->
 
+            <div class="col s12 input-field">
+                <select id="pull_option" class="value">
+                    <option value="pull_type0" class="translate">Ask always, even at night when device is unreachable</option>
+                    <option value="pull_type1" class="translate">Ask only at day, when device is reached by system command PING</option>
+                    <option value="pull_type2" class="translate">Ask only at day, when object is positive reachable by separate iobroker adapter PING</option>
+                </select>
+                <label for="pull_option" class="translate">pull Option</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 col-use-PingObject">
+                <input type="text" id="PingObject" class="value" />
+                <label for="PingObject" class="translate">For option 3 - string to object of MHS in PING adapter</label>
+            </div>
+        </div>
+  
+        <div class="row">
             <div class="col s12 input-field">
                 <input type="text" class="value" id="Befehlszeile" />
                 <label for="Befehlszeile" class="translate">Command Line</label>
@@ -151,20 +183,6 @@ commands:
             </div>
 
         </div>
-<!-- formerly option to skip while calculated night time, when device has no IP and command runs into error
-        <div class="row">
-
-            <div class="col s6 input-field">
-                <input type="text" class="value" id="latitude" />
-                <label for="latitude" class="translate">Latitude to calculate night time</label>
-            </div>
-
-            <div class="col s6 input-field">
-                <input type="text" class="value" id="longitude" />
-                <label for="longitude" class="translate">Longitude to calculate night time</label>
-            </div>
-        </div>
--->
 
     </div>
 

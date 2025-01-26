@@ -1,7 +1,7 @@
 {
   "name": "iobroker.hoymiles-wifi",
-  "version": "0.1.1",
-  "description": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages. Disclaimer: This library is not affiliated with Hoymiles. It is an independent project developed to provide tools for interacting with Hoymiles HMS-XXXXW-2T series micro-inverters featuring integrated WiFi DTU. Any trademarks or product names mentioned are the property of their respective owners. https://github.com/suaveolent/hoymiles-wifi",
+  "version": "0.2",
+  "description": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters. Disclaimer: not affiliated with Hoymiles.",
   "author": {
     "name": "MicHi07i",
     "email": "michi07@mein.gmx"

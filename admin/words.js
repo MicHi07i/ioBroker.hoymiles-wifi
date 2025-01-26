@@ -16,7 +16,7 @@ systemDictionary = {
     },
     'host': {
 	  "en": "host (IP address of Hoymiles HMS):",
-	  "de": "host (IP-Adresse von Hoymiles HMS):",
+	  "de": "Host (IP-Adresse der Hoymiles HMS):",
 	  "ru": "хост (IP-адрес HMS Hoymiles):",
 	  "pt": "host (endereço IP de Hoymiles HMS):",
 	  "nl": "host (IP-adres van Hoymiles HMS):",
@@ -27,21 +27,99 @@ systemDictionary = {
 	  "uk": "хост (IP-адреса Hoymiles HMS):",
 	  "zh-cn": "主机(Hoymiles HMS的IP地址):"
     },
-    'Befehlszeile': {
-         "en": "command line (host and option will be replaced):",
-         "de": "befehlszeile (host und option wird ersetzt):",
-         "ru": "командная строка (хостинг и опция будут заменены):",
-         "pt": "linha de comando (host e opção serão substituídos):",
-         "nl": "commandoregel (host en optie worden vervangen):",
-         "fr": "ligne de commande (l'hôte et l'option seront remplacés):",
-         "it": "riga di comando (host e opzione saranno sostituiti):",
-         "es": "línea de comandos (host y opción serán reemplazados):",
-         "pl": "wiersz poleceń (host i opcja zostaną zastąpione):",
-         "uk": "командний ряд (приблизно і опція буде замінено):",
-         "zh-cn": "命令行( 将替换主机和选项) :"
+    'pull Option': {
+        "en": "Pause pulling data at night?",
+        "de": "Datenbezug nachts pausieren?",
+        "ru": "Данные опроса о паузе ночью?",
+        "pt": "Pausa dados de sondagem à noite?",
+        "nl": "Gegevens pauzeren 's nachts?",
+        "fr": "Arrêter les données de vote la nuit ?",
+        "it": "Pausa inquinare i dati di notte?",
+        "es": "¿Pausa los datos de las encuestas por la noche?",
+        "pl": "Wstrzymać sondaże w nocy?",
+        "uk": "Опитування даних за ніч?",
+        "zh-cn": "晚上暂停投票?"
+    },
+    'skippulling': {
+        "en": "DELETE Skip updating (while device not reachable by PING)",
+        "de": "Aktualisierung überspringen (wenn das Gerät nicht durch PING erreichbar ist)",
+        "ru": "Обновление скипа (в то время как устройство недоступно PING)",
+        "pt": "Pular atualização (enquanto dispositivo não acessível por PING)",
+        "nl": "Bijwerken overslaan (terwijl apparaat niet bereikbaar door PING)",
+        "fr": "Sauter la mise à jour (alors que l'appareil n'est pas accessible par PING)",
+        "it": "Salta l'aggiornamento (mentre il dispositivo non raggiungibile da PING)",
+        "es": "Saltar actualización (mientras dispositivo no accesible por PING)",
+        "pl": "Pomiń aktualizację (podczas gdy urządzenie nie jest osiągalne przez PING)",
+        "uk": "Оновлення пропуску (пристрій не досягається PING)",
+        "zh-cn": "跳过更新( 而 PING 无法到达的设备)"
+    },
+    'Ask always, even at night when device is unreachable': {
+        "en": "Ask always, even at night when device is unreachable",
+        "de": "Abfragen immer, auch nachts, wenn das Gerät nicht erreichbar ist",
+        "ru": "Спросите всегда, даже ночью, когда устройство недоступно",
+        "pt": "Pergunte sempre, mesmo à noite quando o dispositivo é inacessível",
+        "nl": "Vraag altijd, zelfs 's nachts wanneer het apparaat onbereikbaar is",
+        "fr": "Demandez toujours, même la nuit quand l'appareil est inaccessible",
+        "it": "Chiedi sempre, anche di notte quando il dispositivo è irraggiungibile",
+        "es": "Pregunta siempre, incluso por la noche cuando el dispositivo es inalcanzable",
+        "pl": "Pytaj zawsze, nawet w nocy, gdy urządzenie jest nieosiągalne",
+        "uk": "Запитайте завжди, навіть вночі, коли пристрій ненадійне",
+        "zh-cn": "总是问,即使晚上设备无法到达"
+    },
+    'Ask only at day, when device is reached by system command PING': {
+        "en": "Ask only at day, when device is reached by system command PING",
+        "de": "Abfragen nur am Tag, wenn das Gerät durch den Systembefehl PING erreicht wird",
+        "ru": "Спросить только в день, когда устройство достигается по системной команде PING",
+        "pt": "Pergunte apenas no dia, quando o dispositivo é alcançado pelo comando do sistema PING",
+        "nl": "Vraag alleen op dag, wanneer het apparaat is bereikt door systeemopdracht PING",
+        "fr": "Demandez seulement au jour, quand l'appareil est atteint par la commande système PING",
+        "it": "Chiedere solo al giorno, quando il dispositivo è raggiunto dal comando di sistema PING",
+        "es": "Pregunte sólo al día, cuando el dispositivo es alcanzado por el comando del sistema PING",
+        "pl": "Pytaj tylko w dzień, gdy urządzenie jest osiągane przez polecenie systemowe",
+        "uk": "Запитайте лише в день, коли пристрій досягається за допомогою системи PING",
+        "zh-cn": "仅在系统命令 PING 到达设备的当天询问"
+    },
+    'Ask only at day, when object is positive reachable by separate iobroker adapter PING': {
+        "en": "Ask only at day, when object is positive reachable by separate iobroker adapter PING",
+        "de": "Abfragen nur am Tag, wenn das Objekt durch separaten ioBrokeradapter PING positiv erreichbar ist",
+        "ru": "Спроси только в день, когда объект положительно достижим отдельным адаптером iobroker PING",
+        "pt": "Pergunte apenas no dia, quando o objeto é atingível positivo pelo adaptador separado do iobroker PING",
+        "nl": "Vraag het alleen overdag, als object positief bereikbaar is door afzonderlijke iobroker adapter PING",
+        "fr": "Demandez seulement au jour, lorsque l'objet est accessible positivement par adaptateur iobroker séparé PING",
+        "it": "Chiedere solo al giorno, quando l'oggetto è positivo raggiungibile da adattatore iobroker separato PING",
+        "es": "Pregunte sólo al día, cuando el objeto es positivo alcanzable por separado iobroker adaptador PING",
+        "pl": "Pytaj tylko w dzień, gdy obiekt jest pozytywny osiągalny przez oddzielny adapter iobroker PING",
+        "uk": "Запитайте тільки в день, коли об'єкт позитивно досягається від окремого адаптера iobroker PING",
+        "zh-cn": "仅在日内询问, 当对象通过单独的 iobrocast 适配器 PING 实现时"
+    },
+    'For option 3 - string to object of MHS in PING adapter': {
+        "en": "For option 3 - string to object of MHS in PING adapter (reach with key TAB)",
+        "de": "Für Option 3 - String zum Objekt von MHS in PING Adapter (erreichbar per TAB)",
+        "ru": "Для варианта 3 - строка к объекту MHS в адаптере PING (приближается с ключом TAB)",
+        "pt": "Para a opção 3 - string para objeto de MHS no adaptador PING (consulte com TAB chave)",
+        "nl": "Voor optie 3 - tekenreeks om MHS in PING-adapter te objecteren (bereik met sleutel TAB)",
+        "fr": "Pour l'option 3 - chaîne à objet de MHS dans l'adaptateur PING (accès avec clé TAB)",
+        "it": "Per opzione 3 - stringa a oggetto di MHS nell'adattatore PING (accesso con chiave TAB)",
+        "es": "Para la opción 3 - string to object of MHS in PING adapter (reach with key TAB)",
+        "pl": "Dla opcji 3 - ciąg znaków do obiektu MHS w adapterze WINGS (sięgać klawiszem TAB)",
+        "uk": "Для параметра 3 - рядок для об'єкта MHS в адаптері PING (повіді з ключем TAB)",
+        "zh-cn": "选项 3 - PING 适配器中 MHS 对象的字符串( 使用密钥 TAB 访问)"
+    },
+    'Command Line': {
+        "en": "Command line (host and option will be replaced, please do not change this line):",
+        "de": "Befehlszeile (Host und Option werden ersetzt, bitte ändern Sie diese Zeile nicht):",
+        "ru": "Командная линия (хостинг и опция будут заменены, пожалуйста, не меняйте эту строку):",
+        "pt": "Linha de comando (host e opção serão substituídas, por favor não altere esta linha):",
+        "nl": "Opdrachtregel (host en optie worden vervangen, wijzig deze regel niet):",
+        "fr": "Ligne de commande (l'hôte et l'option seront remplacés, veuillez ne pas modifier cette ligne):",
+        "it": "Linea di comando (host e opzione saranno sostituiti, si prega di non cambiare questa linea):",
+        "es": "Línea de comandos (host y opción será reemplazada, por favor no cambie esta línea):",
+        "pl": "Linia poleceń (host i opcja zostaną zastąpione, proszę nie zmieniać tej linii):",
+        "uk": "Командна лінія (приблизно і опція буде замінена, будь ласка, не змініть цей рядок):",
+        "zh-cn": "命令行( 主机和选项将被替换, 请不要更改此行 ) :"
     },
     'Option1': {
-        'en': 'option1',
+        'en': 'option 1',
         'de': 'Option 1',
         'ru': 'Опция 1',
         'pt': 'Opção 1',
@@ -53,7 +131,7 @@ systemDictionary = {
         'zh-cn': '选项1'
     },
     'Option2': {
-        'en': 'option2',
+        'en': 'option 2',
         'de': 'Option 2',
         'ru': 'вариант 2',
         'pt': 'opção 2',
@@ -65,7 +143,7 @@ systemDictionary = {
         'zh-cn': '选项2'
     },
     'Option3': {
-        'en': 'option3',
+        'en': 'option 3',
         'de': 'Option 3',
         'ru': 'Опция 3',
         'pt': 'Opção 3',
@@ -77,7 +155,7 @@ systemDictionary = {
         'zh-cn': '选项3'
     },
     'Option4': {
-        'en': 'option4',
+        'en': 'option 4',
         'de': 'Option 4',
         'ru': 'вариант 4',
         'pt': 'opção 4',
@@ -89,7 +167,7 @@ systemDictionary = {
         'zh-cn': '选项4'
     },
     'Option5': {
-        'en': 'option5',
+        'en': 'option 5',
         'de': 'Option 5',
         'ru': 'Опция 5',
         'pt': 'Opção 5',
@@ -100,7 +178,7 @@ systemDictionary = {
         'pl': 'opcja 5',
         'zh-cn': '选项5'
     },
-    'pollInterval': {
+    'pullInterval': {
         "en": "Interval for updating values (in seconds)",
         "de": "Intervall zur Aktualisierung von Werten (in Sekunden)",
         "ru": "Интервал для обновления значений (в секундах)",
@@ -112,19 +190,6 @@ systemDictionary = {
         "pl": "Interval dla aktualizacji wartości (w sekundach)",
         "uk": "Інтервал для оновлення значень (в секундах)",
         "zh-cn": "更新值的间隔( 秒)"
-    },
-    'skipPolling': {
-        "en": "Skip updating (while device not reachable by PING)",
-        "de": "Aktualisierung überspringen (wenn das Gerät nicht durch PING erreichbar ist)",
-        "ru": "Обновление скипа (в то время как устройство недоступно PING)",
-        "pt": "Pular atualização (enquanto dispositivo não acessível por PING)",
-        "nl": "Bijwerken overslaan (terwijl apparaat niet bereikbaar door PING)",
-        "fr": "Sauter la mise à jour (alors que l'appareil n'est pas accessible par PING)",
-        "it": "Salta l'aggiornamento (mentre il dispositivo non raggiungibile da PING)",
-        "es": "Saltar actualización (mientras dispositivo no accesible por PING)",
-        "pl": "Pomiń aktualizację (podczas gdy urządzenie nie jest osiągalne przez PING)",
-        "uk": "Оновлення пропуску (пристрій не досягається PING)",
-        "zh-cn": "跳过更新( 而 PING 无法到达的设备)"
     },
     'debugModeEnabled': {
         "en": "debug mode",

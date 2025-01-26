@@ -16,6 +16,7 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 
 ### Getting started
 
+<<<<<<< HEAD
 1) Visit https://github.com/suaveolent/hoymiles-wifi and install
        `bash
     $ pip install hoymiles-wifi
@@ -39,6 +40,31 @@ Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utiliz
 7) Most valuable to me is hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt)
 
 Writing is not supported yet, I strongly suggest using your app from SmartPhone instead.
+=======
+This Adapter uses the python script from https://github.com/suaveolent/hoymiles-wifi.
+1) Make sure you have Python installed. As a test, try to run from bash: python
+2) Visit https://github.com/suaveolent/hoymiles-wifi and install
+       `bash
+    $ pip install hoymiles-wifi
+    `. Note: pipx the better option at the raspberry OS bookworm.
+   Please test if you can read data from your HMS using the IP address, run from your shell/command line. Like 
+       `bash
+   $ hoymiles-wifi --host 192.168.1.23 get-real-data
+   `. 
+   I advise to make sure your password of the access point of the HMS is complex.
+3) Please make sure your PATH variable is set, a softlink in /etc/bin might help. Usage of sudo is not recomended, like 'sudo pip install hoymiles-wifi'.
+4) Install this adapter in ioBroker, probably by enabling expert mode.
+5) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
+6) At night time the device is powered off and has no IP address. So you can select if you still want to trigger at night time, skip executing command when system command PING is negative or skip executing command when ioBroker adapter PING is negative.
+
+One option I strongly recomend is 'get-real-data-new':
+hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt).
+Update Version 0.2: writing is now possible, but handle with care.
+hoymiles-wifi.0.get_real_data_new.sgsData.0.powerLimit (now editable (2-100, percentage)
+hoymiles-wifi.0.get_real_data_new.deviceSerialNumber for new Buttons 
+DtuRestart, InverterOn, InverterOff.
+
+>>>>>>> 30c8c61 (New option to skip requests based upon adaper PING; new writing values and reset of device)
 Feel free to give me feedback.
 
 
@@ -51,6 +77,13 @@ Feel free to give me feedback.
 * (MicHi07i) initial release
 ### 0.1.1
 * (MicHi07i) patch for silent run, adjusted debug info when IP is not pingable
+<<<<<<< HEAD
+=======
+### 0.2
+* (MicHi07i) new optional usage of PING from Adapter, not just bash.
+* (MicHi07i) new writable powerLimit, Buttons DtuRestart, InverterOn, InverterOff.
+
+>>>>>>> 30c8c61 (New option to skip requests based upon adaper PING; new writing values and reset of device)
 
 ## License
 MIT License
