@@ -1,0 +1,72 @@
+{
+  "name": "iobroker.hoymiles-wifi",
+  "version": "0.2.4",
+  "description": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters. Disclaimer: not affiliated with Hoymiles.",
+  "author": {
+    "name": "MicHi07i",
+    "email": "michi07@mein.gmx"
+  },
+  "homepage": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "Hoymiles",
+    "DTU",
+    "HMS-XXXXW-2T",
+    "HMS-800W-2T"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicHi07i/ioBroker.hoymiles-wifi.git"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.3"
+  },
+  "devDependencies": {
+    "@iobroker/testing": "^5.0.0",
+    "@types/chai": "^4.3.16",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^14.18.63",
+    "@types/proxyquire": "^1.3.31",
+    "@types/sinon": "^17.0.3",
+    "@types/sinon-chai": "^3.2.12",
+    "axios": "^1.7.2",
+    "chai": "^5.1.1",
+    "chai-as-promised": "^8.0.0",
+    "eslint": "^9.7.0",
+    "gulp": "^5.0.0",
+    "mocha": "^10.6.0",
+    "proxyquire": "^2.1.3",
+    "sinon": "^18.0.0",
+    "sinon-chai": "^3.7.0"
+  },
+  "main": "main.js",
+  "files": [
+    "main.js",
+    "io-package.json",
+    "package.json",
+    "README.md",
+    "admin/index_m.html",
+    "admin/hoymiles-wifi.png",
+    "admin/admin.d.ts",
+    "admin/style.css",
+    "admin/tsconfig.json",
+    "admin/words.js"
+  ],
+  "scripts": {
+    "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+    "test:package": "mocha test/package --exit",
+    "test:unit": "mocha test/unit --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:js && npm run test:package",
+    "lint": "eslint"
+  },
+  "bugs": {
+    "url": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/issues"
+  },
+  "readmeFilename": "README.md"
+}
