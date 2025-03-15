@@ -1,0 +1,113 @@
+{
+  "common": {
+    "name": "hoymiles-wifi",
+    "version": "0.2.5",
+    "news": {
+      "0.2.5": {
+          "en": "Version 0.2.5 fixes missing lines in io-package.json",
+          "de": "Version 0.2.5 repariert fehlende Zeilen in io-Package. Json",
+          "ru": "Версия 0.2.5 исправляет недостающие строки в io-пакете. Джонсон",
+          "pt": "Versão 0.2.5 corrige linhas em falta no io-package. O que foi",
+          "nl": "Versie 0.2.5 repareert ontbrekende lijnen in io-package. json",
+          "fr": "La version 0.2.5 corrige les lignes manquantes dans io-package. Json",
+          "it": "La versione 0.2.5 fissa le linee mancanti nel pacchetto io. J",
+          "es": "Versión 0.2.5 fija líneas faltantes en io-package. json",
+          "pl": "Wersja 0.2.5 naprawia brakujące linie w pakiecie jo-. json",
+          "uk": "Версія 0.2.5 виправляє відсутні лінії в io-package. свінгери",
+          "zh-cn": "0.2.5版本修复io-package中缺失的行. 贾森"
+      }
+    },
+    "adminUI": {
+      "enabled": true,
+      "jsonConfig": true,
+      "custom": true,
+      "config": "json"
+    },
+    "titleLang": {
+      "en": "hoymiles-wifi",
+      "de": "hoymiles-wifi",
+      "ru": "Hoymiles-Wi-Fi",
+      "pt": "hoymiles-wi-fi",
+      "nl": "hoymiles-wifi",
+      "fr": "hoymiles-wifi",
+      "it": "hoymiles-wifi",
+      "es": "hoymiles-wifi",
+      "pl": "hoymiles-wifi",
+      "uk": "hoymiles-wifi",
+      "zh-cn": "Hoymiles-wifi"
+    },
+    "desc": {
+      "en": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages from external library. Disclaimer: neither this adapter nor library is affiliated with Hoymiles.",
+      "de": "Kommunikation mit Hoymiles DTUs und den HMS-XXW-2T HMS Mikroinvertern, unter Verwendung von Protobuf-Nachrichten aus der externen Bibliothek. Haftungsausschluss: weder dieser Adapter noch die Bibliothek sind mit Hoymiles verbunden.",
+      "ru": "Связь с DTU Hoymiles и микроинверторами HMS-XXXXW-2T HMS, используя протобуф-сообщения из внешней библиотеки. Отказ от ответственности: ни этот адаптер, ни библиотека не связаны с Hoymiles.",
+      "pt": "Comunicação com Hoymiles DTUs e os microinverters HMS-XXXXW-2T HMS, utilizando mensagens de protobuf da biblioteca externa. Disclaimer: nem este adaptador nem a biblioteca é afiliado com Hoymiles.",
+      "nl": "Communicatie met Hoymiles DTU's en de HMS-XXXXW-2T HMS micro-inverters, gebruik makend van protobuf berichten van externe bibliotheek. Disclaimer: noch deze adapter, noch bibliotheek is aangesloten bij Hoymiles.",
+      "fr": "Communication avec les DTU de Hoymiles et les micro-onduleurs HMS HMS-XXXXW-2T, en utilisant des messages protobuf provenant de la bibliothèque externe. Avertissement : ni cet adaptateur ni cette bibliothèque ne sont affiliés à Hoymiles.",
+      "it": "Comunicazione con Hoymiles DTUs e i microinverter HMS-XXXXW-2T HMS, utilizzando messaggi protobuf da libreria esterna. Disclaimer: né questo adattatore né biblioteca è affiliato a Hoymiles.",
+      "es": "Comunicación con los DTU de Hoymiles y los microinversionistas HMS HMS-XXXXW-2T, utilizando mensajes de protobuf de biblioteca externa. Renuncia: ni este adaptador ni biblioteca está afiliado a Hoymiles.",
+      "pl": "Komunikacja z Hoymiles DTU i mikroinwerterami HMS- XXXXW- 2T HMS, wykorzystując komunikaty o protobufie z zewnętrznej biblioteki. Wyłączenie: ani ten adapter, ani biblioteka nie są powiązane z Hoymiles.",
+      "uk": "Зв'язок з мікроінверторами HMS-XXXXW-2T HMS, використовуючи протобуф повідомлення з зовнішньої бібліотеки. Відповідач: ні цей адаптер, ні бібліотека афілійовані Hoymiles.",
+      "zh-cn": "与Hoymiles DTUs和HMS-XXW-2T HMS微反光器的通信,利用外部图书馆的原生电文。 免责声明:这个适配器和图书馆都不隶属于Hoymiles."
+    },
+    "authors": [
+      "MicHi07 <michi07@mein.gmx>"
+    ],
+    "keywords": [
+      "ioBroker",
+      "Hoymiles",
+      "DTU",
+      "HMS-XXXXW-2T",
+      "HMS-800W-2T"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "hoymiles-wifi.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
+    "readme": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "energy",
+    "compact": true,
+    "connectionType": "local",
+    "adminUI": {
+      "enabled": true,
+      "pages": ["config"]
+    },
+    "tier": 2,
+    "dataSource": "poll",
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ]
+  },
+  "native": {
+    "host": "192.168.1.11",
+    "pullInterval": 60,
+    "pull_option": "pull_type0",
+    "PingObject": "ping.0.raspberrypi.192_168_1_11",
+    "Befehlszeile": "hoymiles-wifi --host $host --as-json $option",
+    "Option1": "get-real-data-new",
+    "Option2": "app-get-hist-power",
+    "Option3": "get-real-data",
+    "Option4": "",
+    "Option5": "",
+    "Befehlszeile1": "",
+    "Befehlszeile2": "",
+    "Befehlszeile3": "",
+    "Befehlszeile4": "",
+    "Befehlszeile5": "",
+    "BefehlszeilePowerLimit": "hoymiles-wifi --host $host --disable-interactive --power-limit $option set-power-limit",
+    "BefehlszeileRestart": "hoymiles-wifi --host $host --disable-interactive restart-dtu",
+    "BefehlszeileInverterOn": "hoymiles-wifi --host $host --disable-interactive turn-on-inverter",
+    "BefehlszeileInverterOff": "hoymiles-wifi --host $host --disable-interactive turn-off-inverter",
+    "debugModeEnabled": false
+  },
+  "objects": [],
+  "instanceObjects": []
+}

@@ -1,0 +1,75 @@
+{
+  "common": {
+    "name": "hoymiles-wifi",
+    "version": "0.2.1",
+    "news": {
+      "0.2.1": {
+        "en": "Version 0.2.1 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
+        "de": "Version 0.2.1 verwendet jetzt 3 Optionen, um die Aktualisierung zu überspringen (von HMS, wenn dies keine IP-Adresse in der Nacht hat), Wert PowerFactor ist schreibbar."
+      }
+    },
+    "adminUI": {
+      "enabled": true,
+      "jsonConfig": true,
+      "custom": true
+    },
+    "titleLang": {
+      "en": "hoymiles-wifi",
+      "de": "hoymiles-wifi",
+      "ru": "Hoymiles-Wi-Fi",
+      "pt": "hoymiles-wi-fi",
+      "nl": "hoymiles-wifi",
+      "fr": "hoymiles-wifi",
+      "it": "hoymiles-wifi",
+      "es": "hoymiles-wifi",
+      "pl": "hoymiles-wifi",
+      "uk": "hoymiles-wifi",
+      "zh-cn": "Hoymiles-wifi"
+    },
+    "desc": {
+      "en": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages from external library. Disclaimer: neither this adapter nor library is affiliated with Hoymiles.",
+      "de": "Kommunikation mit Hoymiles DTUs und den HMS-XXW-2T HMS Mikroinvertern, unter Verwendung von Protobuf-Nachrichten aus der externen Bibliothek. Haftungsausschluss: weder dieser Adapter noch die Bibliothek sind mit Hoymiles verbunden."
+    },
+    "authors": [
+      "MicHi07 <michi07@mein.gmx>"
+    ],
+    "keywords": [
+      "Hoymiles",
+      "DTU",
+      "HMS-XXXXW-2T",
+      "HMS-800W-2T"
+    ],
+    "licenseInformation": {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "hoymiles-wifi.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
+    "readme": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "energy",
+    "compact": true,
+    "adminUI": {
+      "enabled": true,
+      "pages": ["config"]
+    },
+    "tier": 2,
+    "dataSource": "poll",
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ]
+  },
+  "native": {
+    "host": "192.168.1.11",
+    "pullInterval": 60,
+    "pull_option": "pull_type0",
+    "debugModeEnabled": false
+  },
+  "objects": [],
+  "instanceObjects": []
+}
