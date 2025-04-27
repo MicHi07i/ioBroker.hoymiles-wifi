@@ -1,33 +1,20 @@
 {
   "common": {
     "name": "hoymiles-wifi",
-    "version": "0.2.5",
+    "version": "0.2.5-3",
     "news": {
-      "0.2.5": {
-        "en": "Version 0.2.5 fixes missing lines in io-package.json",
-        "de": "Version 0.2.5 repariert fehlende Zeilen in io-Package. Json",
-        "ru": "Версия 0.2.5 исправляет недостающие строки в io-пакете. Джонсон",
-        "pt": "Versão 0.2.5 corrige linhas em falta no io-package. O que foi",
-        "nl": "Versie 0.2.5 repareert ontbrekende lijnen in io-package. json",
-        "fr": "La version 0.2.5 corrige les lignes manquantes dans io-package. Json",
-        "it": "La versione 0.2.5 fissa le linee mancanti nel pacchetto io. J",
-        "es": "Versión 0.2.5 fija líneas faltantes en io-package. json",
-        "pl": "Wersja 0.2.5 naprawia brakujące linie w pakiecie jo-. json",
-        "uk": "Версія 0.2.5 виправляє відсутні лінії в io-package. свінгери",
-        "zh-cn": "0.2.5版本修复io-package中缺失的行. 贾森"
-      },
-      "0.2.4": {
-          "en": "Version 0.2.4 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
-          "de": "Version 0.2.4 verwendet nun 3 Optionen, um die Aktualisierung zu überspringen (von HMS, wenn dies keine IP-Adresse in der Nacht hat), Wert PowerFactor ist schreibbar.",
-          "ru": "Версия 0.2.4 использует сейчас 3 варианта, чтобы пропустить обновление (от HMS, когда у этого нет IP-адреса ночью), значение PowerFactor записывается.",
-          "pt": "A versão 0.2.4 usa agora 3 opções para pular a atualização (de HMS quando isso não tem nenhum endereço IP à noite), o valor PowerFactor é escrevêvel.",
-          "nl": "Versie 0.2.4 gebruikt nu 3 opties om updates over te slaan (vanaf HMS als dit geen IP-adres heeft 's nachts), waarde PowerFactor is schrijfbaar.",
-          "fr": "La version 0.2.4 utilise maintenant 3 options pour sauter la mise à jour (à partir de HMS quand il n'y a pas d'adresse IP la nuit), la valeur PowerFactor peut être écrite.",
-          "it": "La versione 0.2.4 utilizza ora 3 opzioni per saltare l'aggiornamento (da HMS quando questo non ha indirizzo IP di notte), valore PowerFactor è scrivibile.",
-          "es": "Versión 0.2.4 utiliza ahora 3 opciones para saltar la actualización (desde HMS cuando esto no tiene dirección IP por la noche), valor PowerFactor es escribible.",
-          "pl": "Wersja 0.2.4 wykorzystuje teraz 3 opcje do pominięcia aktualizacji (z HMS, gdy nie ma adresu IP w nocy), wartość PowerFactor jest zapisywalna.",
-          "uk": "Версія 0.2.4 використовує зараз 3 варіанти, щоб пропустити оновлення (від HMS, коли це не має IP-адреси вночі), значення PowerFactor пишеться.",
-          "zh-cn": "0.2.4版本现在使用3个选项来跳过更新(在夜间没有IP地址时来自HMS),值PowerFactor是可写入的."
+      "0.2.1-5": {
+        "en": "Version 0.2.1-5 fixes missing lines in io-package.json",
+        "de": "Version 0.2.1-5 repariert fehlende Zeilen in io-Package. Json",
+        "ru": "Версия 0.2.1-5 исправляет недостающие строки в io-пакете. Джонсон",
+        "pt": "Versão 0.2.1-5 corrige linhas em falta no io-package. O que foi",
+        "nl": "Versie 0.2.1-5 repareert ontbrekende lijnen in io-package. json",
+        "fr": "La version 0.2.1-5 corrige les lignes manquantes dans io-package. Json",
+        "it": "La versione 0.2.1-5 fissa le linee mancanti nel pacchetto io. J",
+        "es": "Versión 0.2.1-5 fija líneas faltantes en io-package. json",
+        "pl": "Wersja 0.2.1-5 naprawia brakujące linie w pakiecie jo-. json",
+        "uk": "Версія 0.2.1-5 виправляє відсутні лінії в io-package. свінгери",
+        "zh-cn": "0.2.1-5版本修复io-package中缺失的行. 贾森"
       },
       "0.2.0": {
         "en": "Version 0.2 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
@@ -85,7 +72,6 @@
       "MicHi07 <michi07@mein.gmx>"
     ],
     "keywords": [
-      "ioBroker",
       "Hoymiles",
       "DTU",
       "HMS-XXXXW-2T",
@@ -97,6 +83,7 @@
       "url": "https://opensource.org/licenses/MIT"
     },
     "platform": "Javascript/Node.js",
+    "main": "main.js",
     "icon": "hoymiles-wifi.png",
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
@@ -105,15 +92,15 @@
     "mode": "daemon",
     "type": "energy",
     "compact": true,
-    "connectionType": "local",
-    "tier": 2,
-    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
     "dependencies": [
       {
         "js-controller": ">=5.0.19"
       }
     ],
-    "installedFrom": "MicHi07i/ioBroker.hoymiles-wifi"
+    "installedFrom": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi"
   },
   "native": {
     "host": "192.168.1.11",
@@ -136,7 +123,5 @@
     "BefehlszeileInverterOn": "hoymiles-wifi --host $host --disable-interactive turn-on-inverter",
     "BefehlszeileInverterOff": "hoymiles-wifi --host $host --disable-interactive turn-off-inverter",
     "debugModeEnabled": false
-  },
-  "objects": [],
-  "instanceObjects": []
+  }
 }
