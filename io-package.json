@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "hoymiles-wifi",
-    "version": "0.2.5-3",
+    "version": "0.2.5",
     "news": {
-      "0.2.1-5": {
+      "0.2.5": {
         "en": "Version 0.2.1-5 fixes missing lines in io-package.json",
         "de": "Version 0.2.1-5 repariert fehlende Zeilen in io-Package. Json",
         "ru": "Версия 0.2.1-5 исправляет недостающие строки в io-пакете. Джонсон",
@@ -91,6 +91,8 @@
     "loglevel": "info",
     "mode": "daemon",
     "type": "energy",
+    "connectionType": "local",
+    "dataSource": "poll",
     "compact": true,
     "adminUI": {
       "config": "json"
@@ -99,8 +101,7 @@
       {
         "js-controller": ">=5.0.19"
       }
-    ],
-    "installedFrom": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi"
+    ]
   },
   "native": {
     "host": "192.168.1.11",
