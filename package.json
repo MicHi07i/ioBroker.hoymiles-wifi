@@ -1,6 +1,6 @@
 {
   "name": "iobroker.hoymiles-wifi",
-  "version": "0.2.5",
+  "version": "0.2.5-3",
   "description": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters. Disclaimer: not affiliated with Hoymiles.",
   "author": {
     "name": "MicHi07i",
@@ -9,7 +9,6 @@
   "homepage": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi",
   "license": "MIT",
   "keywords": [
-    "ioBroker",
     "Hoymiles",
     "DTU",
     "HMS-XXXXW-2T",
@@ -51,11 +50,13 @@
     "package.json",
     "README.md",
     "admin/index_m.html",
+    "admin/index.html",
     "admin/hoymiles-wifi.png",
     "admin/admin.d.ts",
     "admin/style.css",
     "admin/tsconfig.json",
-    "admin/words.js"
+    "admin/words.js",
+    "!.gitignore"
   ],
   "scripts": {
     "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
