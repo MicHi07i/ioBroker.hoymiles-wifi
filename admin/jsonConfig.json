@@ -1,0 +1,75 @@
+{
+	"i18n": true,
+	"type": "panel",
+	"items": {
+		"host": {
+			"type": "text",
+			"label": "host (IP address of Hoymiles HMS)",
+			"newLine": true
+		},
+		"pullInterval": {
+			"type": "number",
+			"label": "Interval for updating values (in seconds)",
+			"newLine": true
+		},
+		"pull_option": {
+			"type": "select",
+			"label": "Pause pulling data at night?",
+			"options": [
+				{
+					"label": "Ask always, even at night when device is unreachable",
+					"value": "pull_type0"
+				},
+				{
+					"label": "Ask only at day, when device is reached by system command PING",
+					"value": "pull_type1"
+				},
+				{
+					"label": "Ask only at day, when object is positive reachable by separate iobroker adapter PING",
+					"value": "pull_type2"
+				}
+			],
+			"newLine": true
+		},
+		"PingObject": {
+			"type": "text",
+			"label": "For option 3 - string to object of MHS in PING adapter",
+			"newLine": true
+		},
+		"Befehlszeile": {
+			"type": "text",
+			"label": "Command line (host and option will be replaced, please do not change this line)",
+			"newLine": true
+		},
+		"Option1": {
+			"type": "text",
+			"label": "option 1",
+			"newLine": true
+		},
+		"Option2": {
+			"type": "text",
+			"label": "option 2",
+			"newLine": true
+		},
+		"Option3": {
+			"type": "text",
+			"label": "option 3",
+			"newLine": true
+		},
+		"Option4": {
+			"type": "text",
+			"label": "option 4",
+			"newLine": true
+		},
+		"Option5": {
+			"type": "text",
+			"label": "option 5",
+			"newLine": true
+		},
+		"debugModeEnabled": {
+			"type": "checkbox",
+			"label": "debug mode",
+			"newLine": true
+		}
+	}
+}

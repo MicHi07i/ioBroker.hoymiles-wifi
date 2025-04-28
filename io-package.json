@@ -1,128 +1,157 @@
 {
-  "common": {
-    "name": "hoymiles-wifi",
-    "version": "0.2.5",
-    "news": {
-      "0.2.5": {
-        "en": "Version 0.2.1-5 fixes missing lines in io-package.json",
-        "de": "Version 0.2.1-5 repariert fehlende Zeilen in io-Package. Json",
-        "ru": "Версия 0.2.1-5 исправляет недостающие строки в io-пакете. Джонсон",
-        "pt": "Versão 0.2.1-5 corrige linhas em falta no io-package. O que foi",
-        "nl": "Versie 0.2.1-5 repareert ontbrekende lijnen in io-package. json",
-        "fr": "La version 0.2.1-5 corrige les lignes manquantes dans io-package. Json",
-        "it": "La versione 0.2.1-5 fissa le linee mancanti nel pacchetto io. J",
-        "es": "Versión 0.2.1-5 fija líneas faltantes en io-package. json",
-        "pl": "Wersja 0.2.1-5 naprawia brakujące linie w pakiecie jo-. json",
-        "uk": "Версія 0.2.1-5 виправляє відсутні лінії в io-package. свінгери",
-        "zh-cn": "0.2.1-5版本修复io-package中缺失的行. 贾森"
-      },
-      "0.2.0": {
-        "en": "Version 0.2 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
-        "de": "Version 0.2 verwendet jetzt 3 Optionen, um die Aktualisierung zu überspringen (von HMS, wenn dies keine IP-Adresse in der Nacht hat), Wert PowerFactor ist schreibbar.",
-        "ru": "Версия 0.2 использует сейчас 3 варианта, чтобы пропустить обновление (от HMS, когда у этого нет IP-адреса ночью), значение PowerFactor записывается.",
-        "pt": "A versão 0.2 usa agora 3 opções para ignorar a atualização (de HMS quando isso não tem endereço IP à noite), o valor PowerFactor é escrevêvel.",
-        "nl": "Versie 0.2 gebruikt nu 3 opties om updates over te slaan (van HMS als dit geen IP-adres heeft 's nachts), waarde PowerFactor is schrijfbaar.",
-        "fr": "La version 0.2 utilise maintenant 3 options pour sauter la mise à jour (à partir de HMS quand il n'y a pas d'adresse IP la nuit), la valeur PowerFactor peut être écrite.",
-        "it": "La versione 0.2 utilizza ora 3 opzioni per saltare l'aggiornamento (da HMS quando questo non ha indirizzo IP di notte), valore PowerFactor è scrivibile.",
-        "es": "Versión 0.2 utiliza ahora 3 opciones para saltar la actualización (desde HMS cuando esto no tiene dirección IP por la noche), valor PowerFactor es escribible.",
-        "pl": "Wersja 0.2 wykorzystuje teraz 3 opcje do pominięcia aktualizacji (z HMS, gdy nie ma adresu IP w nocy), wartość PowerFactor jest zapisywalna.",
-        "uk": "Версія 0.2 використовує зараз 3 варіанти, щоб пропустити оновлення (від HMS, коли це не має IP-адреси вночі), значення PowerFactor пишеться.",
-        "zh-cn": "0.2版本现在使用3个选项来跳过更新(在夜间没有IP地址时从HMS),值PowerFactor是可写入的."
-      },
-      "0.1.0": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "zh-cn": "首次出版"
-      }
-    },
-    "titleLang": {
-      "en": "hoymiles-wifi",
-      "de": "hoymiles-wifi",
-      "ru": "Hoymiles-Wi-Fi",
-      "pt": "hoymiles-wi-fi",
-      "nl": "hoymiles-wifi",
-      "fr": "hoymiles-wifi",
-      "it": "hoymiles-wifi",
-      "es": "hoymiles-wifi",
-      "pl": "hoymiles-wifi",
-      "uk": "hoymiles-wifi",
-      "zh-cn": "Hoymiles-wifi"
-    },
-    "desc": {
-      "en": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages from external library. Disclaimer: neither this adapter nor library is affiliated with Hoymiles.",
-      "de": "Kommunikation mit Hoymiles DTUs und den HMS-XXW-2T HMS Mikroinvertern, unter Verwendung von Protobuf-Nachrichten aus der externen Bibliothek. Haftungsausschluss: weder dieser Adapter noch die Bibliothek sind mit Hoymiles verbunden.",
-      "ru": "Связь с DTU Hoymiles и микроинверторами HMS-XXXXW-2T HMS, используя протобуф-сообщения из внешней библиотеки. Отказ от ответственности: ни этот адаптер, ни библиотека не связаны с Hoymiles.",
-      "pt": "Comunicação com Hoymiles DTUs e os microinverters HMS-XXXXW-2T HMS, utilizando mensagens de protobuf da biblioteca externa. Disclaimer: nem este adaptador nem a biblioteca é afiliado com Hoymiles.",
-      "nl": "Communicatie met Hoymiles DTU's en de HMS-XXXXW-2T HMS micro-inverters, gebruik makend van protobuf berichten van externe bibliotheek. Disclaimer: noch deze adapter, noch bibliotheek is aangesloten bij Hoymiles.",
-      "fr": "Communication avec les DTU de Hoymiles et les micro-onduleurs HMS HMS-XXXXW-2T, en utilisant des messages protobuf provenant de la bibliothèque externe. Avertissement : ni cet adaptateur ni cette bibliothèque ne sont affiliés à Hoymiles.",
-      "it": "Comunicazione con Hoymiles DTUs e i microinverter HMS-XXXXW-2T HMS, utilizzando messaggi protobuf da libreria esterna. Disclaimer: né questo adattatore né biblioteca è affiliato a Hoymiles.",
-      "es": "Comunicación con los DTU de Hoymiles y los microinversionistas HMS HMS-XXXXW-2T, utilizando mensajes de protobuf de biblioteca externa. Renuncia: ni este adaptador ni biblioteca está afiliado a Hoymiles.",
-      "pl": "Komunikacja z Hoymiles DTU i mikroinwerterami HMS- XXXXW- 2T HMS, wykorzystując komunikaty o protobufie z zewnętrznej biblioteki. Wyłączenie: ani ten adapter, ani biblioteka nie są powiązane z Hoymiles.",
-      "uk": "Зв'язок з мікроінверторами HMS-XXXXW-2T HMS, використовуючи протобуф повідомлення з зовнішньої бібліотеки. Відповідач: ні цей адаптер, ні бібліотека афілійовані Hoymiles.",
-      "zh-cn": "与Hoymiles DTUs和HMS-XXW-2T HMS微反光器的通信,利用外部图书馆的原生电文。 免责声明:这个适配器和图书馆都不隶属于Hoymiles."
-    },
-    "authors": [
-      "MicHi07 <michi07@mein.gmx>"
-    ],
-    "keywords": [
-      "Hoymiles",
-      "DTU",
-      "HMS-XXXXW-2T",
-      "HMS-800W-2T"
-    ],
-    "licenseInformation": {
-      "license": "MIT",
-      "type": "free",
-      "url": "https://opensource.org/licenses/MIT"
-    },
-    "platform": "Javascript/Node.js",
-    "main": "main.js",
-    "icon": "hoymiles-wifi.png",
-    "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
-    "readme": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/blob/master/README.md",
-    "loglevel": "info",
-    "mode": "daemon",
-    "type": "energy",
-    "connectionType": "local",
-    "dataSource": "poll",
-    "compact": true,
-    "adminUI": {
-      "config": "json"
-    },
-    "dependencies": [
-      {
-        "js-controller": ">=5.0.19"
-      }
-    ]
-  },
-  "native": {
-    "host": "192.168.1.11",
-    "pullInterval": 60,
-    "pull_option": "pull_type0",
-    "PingObject": "ping.0.raspberrypi.192_168_1_11",
-    "Befehlszeile": "hoymiles-wifi --host $host --as-json $option",
-    "Option1": "get-real-data-new",
-    "Option2": "app-get-hist-power",
-    "Option3": "get-real-data",
-    "Option4": "",
-    "Option5": "",
-    "Befehlszeile1": "",
-    "Befehlszeile2": "",
-    "Befehlszeile3": "",
-    "Befehlszeile4": "",
-    "Befehlszeile5": "",
-    "BefehlszeilePowerLimit": "hoymiles-wifi --host $host --disable-interactive --power-limit $option set-power-limit",
-    "BefehlszeileRestart": "hoymiles-wifi --host $host --disable-interactive restart-dtu",
-    "BefehlszeileInverterOn": "hoymiles-wifi --host $host --disable-interactive turn-on-inverter",
-    "BefehlszeileInverterOff": "hoymiles-wifi --host $host --disable-interactive turn-off-inverter",
-    "debugModeEnabled": false
-  }
+	"common": {
+		"name": "hoymiles-wifi",
+		"version": "0.2.6",
+		"news": {
+		      "0.2.6": {
+		        "en": "Version 0.2.6 fixes missing lines in io-package.json",
+		        "de": "Version 0.2.6 repariert fehlende Zeilen in io-Package. Json",
+		        "ru": "Версия 0.2.6 исправляет недостающие строки в io-пакете. Джонсон",
+		        "pt": "Versão 0.2.6 corrige linhas em falta no io-package. O que foi",
+		        "nl": "Versie 0.2.6 repareert ontbrekende lijnen in io-package. json",
+		        "fr": "La version 0.2.6 corrige les lignes manquantes dans io-package. Json",
+		        "it": "La versione 0.2.6 fissa le linee mancanti nel pacchetto io. J",
+		        "es": "Versión 0.2.6 fija líneas faltantes en io-package. json",
+		        "pl": "Wersja 0.2.6 naprawia brakujące linie w pakiecie jo-. json",
+		        "uk": "Версія 0.2.6 виправляє відсутні лінії в io-package. свінгери",
+		        "zh-cn": "0.2.6版本修复io-package中缺失的行. 贾森"
+		      },
+		      "0.2.4": {
+		        "en": "Version 0.2.4 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
+		        "de": "Version 0.2.4 verwendet nun 3 Optionen, um die Aktualisierung zu überspringen (von HMS, wenn dies keine IP-Adresse in der Nacht hat), Wert PowerFactor ist schreibbar.",
+		        "ru": "Версия 0.2.4 использует сейчас 3 варианта, чтобы пропустить обновление (от HMS, когда у этого нет IP-адреса ночью), значение PowerFactor записывается.",
+		        "pt": "A versão 0.2.4 usa agora 3 opções para pular a atualização (de HMS quando isso não tem nenhum endereço IP à noite), o valor PowerFactor é escrevêvel.",
+		        "nl": "Versie 0.2.4 gebruikt nu 3 opties om updates over te slaan (vanaf HMS als dit geen IP-adres heeft 's nachts), waarde PowerFactor is schrijfbaar.",
+		        "fr": "La version 0.2.4 utilise maintenant 3 options pour sauter la mise à jour (à partir de HMS quand il n'y a pas d'adresse IP la nuit), la valeur PowerFactor peut être écrite.",
+		        "it": "La versione 0.2.4 utilizza ora 3 opzioni per saltare l'aggiornamento (da HMS quando questo non ha indirizzo IP di notte), valore PowerFactor è scrivibile.",
+		        "es": "Versión 0.2.4 utiliza ahora 3 opciones para saltar la actualización (desde HMS cuando esto no tiene dirección IP por la noche), valor PowerFactor es escribible.",
+		        "pl": "Wersja 0.2.4 wykorzystuje teraz 3 opcje do pominięcia aktualizacji (z HMS, gdy nie ma adresu IP w nocy), wartość PowerFactor jest zapisywalna.",
+		        "uk": "Версія 0.2.4 використовує зараз 3 варіанти, щоб пропустити оновлення (від HMS, коли це не має IP-адреси вночі), значення PowerFactor пишеться.",
+		        "zh-cn": "0.2.4版本现在使用3个选项来跳过更新(在夜间没有IP地址时来自HMS),值PowerFactor是可写入的."
+		      },
+		      "0.2.0": {
+		        "en": "Version 0.2 uses now 3 options to skip updating (from HMS when this has no IP address at night), value PowerFactor is writeable.",
+		        "de": "Version 0.2 verwendet jetzt 3 Optionen, um die Aktualisierung zu überspringen (von HMS, wenn dies keine IP-Adresse in der Nacht hat), Wert PowerFactor ist schreibbar.",
+		        "ru": "Версия 0.2 использует сейчас 3 варианта, чтобы пропустить обновление (от HMS, когда у этого нет IP-адреса ночью), значение PowerFactor записывается.",
+		        "pt": "A versão 0.2 usa agora 3 opções para ignorar a atualização (de HMS quando isso não tem endereço IP à noite), o valor PowerFactor é escrevêvel.",
+		        "nl": "Versie 0.2 gebruikt nu 3 opties om updates over te slaan (van HMS als dit geen IP-adres heeft 's nachts), waarde PowerFactor is schrijfbaar.",
+		        "fr": "La version 0.2 utilise maintenant 3 options pour sauter la mise à jour (à partir de HMS quand il n'y a pas d'adresse IP la nuit), la valeur PowerFactor peut être écrite.",
+		        "it": "La versione 0.2 utilizza ora 3 opzioni per saltare l'aggiornamento (da HMS quando questo non ha indirizzo IP di notte), valore PowerFactor è scrivibile.",
+		        "es": "Versión 0.2 utiliza ahora 3 opciones para saltar la actualización (desde HMS cuando esto no tiene dirección IP por la noche), valor PowerFactor es escribible.",
+		        "pl": "Wersja 0.2 wykorzystuje teraz 3 opcje do pominięcia aktualizacji (z HMS, gdy nie ma adresu IP w nocy), wartość PowerFactor jest zapisywalna.",
+		        "uk": "Версія 0.2 використовує зараз 3 варіанти, щоб пропустити оновлення (від HMS, коли це не має IP-адреси вночі), значення PowerFactor пишеться.",
+		        "zh-cn": "0.2版本现在使用3个选项来跳过更新(在夜间没有IP地址时从HMS),值PowerFactor是可写入的."
+		      },
+		      "0.1.0": {
+		        "en": "initial release",
+		        "de": "Erstveröffentlichung",
+		        "ru": "Начальная версия",
+		        "pt": "lançamento inicial",
+		        "nl": "Eerste uitgave",
+		        "fr": "Première version",
+		        "it": "Versione iniziale",
+		        "es": "Versión inicial",
+		        "pl": "Pierwsze wydanie",
+		        "zh-cn": "首次出版"
+		      }
+		    },
+		"desc": {
+			"en": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters, utilizing protobuf messages from external library. Disclaimer: neither this adapter nor library is affiliated with Hoymiles.",
+			"de": "Kommunikation mit Hoymiles DTUs und den HMS-XXW-2T HMS Mikroinvertern, unter Verwendung von Protobuf-Nachrichten aus der externen Bibliothek. Haftungsausschluss: weder dieser Adapter noch die Bibliothek sind mit Hoymiles verbunden.",
+			"ru": "Связь с DTU Hoymiles и микроинверторами HMS-XXXXW-2T HMS, используя протобуф-сообщения из внешней библиотеки. Отказ от ответственности: ни этот адаптер, ни библиотека не связаны с Hoymiles.",
+			"pt": "Comunicação com Hoymiles DTUs e os microinverters HMS-XXXXW-2T HMS, utilizando mensagens de protobuf da biblioteca externa. Disclaimer: nem este adaptador nem a biblioteca é afiliado com Hoymiles.",
+			"nl": "Communicatie met Hoymiles DTU's en de HMS-XXXXW-2T HMS micro-inverters, gebruik makend van protobuf berichten van externe bibliotheek. Disclaimer: noch deze adapter, noch bibliotheek is aangesloten bij Hoymiles.",
+			"fr": "Communication avec les DTU de Hoymiles et les micro-onduleurs HMS HMS-XXXXW-2T, en utilisant des messages protobuf provenant de la bibliothèque externe. Avertissement : ni cet adaptateur ni cette bibliothèque ne sont affiliés à Hoymiles.",
+			"it": "Comunicazione con Hoymiles DTUs e i microinverter HMS-XXXXW-2T HMS, utilizzando messaggi protobuf da libreria esterna. Disclaimer: né questo adattatore né biblioteca è affiliato a Hoymiles.",
+			"es": "Comunicación con los DTU de Hoymiles y los microinversionistas HMS HMS-XXXXW-2T, utilizando mensajes de protobuf de biblioteca externa. Renuncia: ni este adaptador ni biblioteca está afiliado a Hoymiles.",
+			"pl": "Komunikacja z Hoymiles DTU i mikroinwerterami HMS- XXXXW- 2T HMS, wykorzystując komunikaty o protobufie z zewnętrznej biblioteki. Wyłączenie: ani ten adapter, ani biblioteka nie są powiązane z Hoymiles.",
+			"uk": "Зв'язок з мікроінверторами HMS-XXXXW-2T HMS, використовуючи протобуф повідомлення з зовнішньої бібліотеки. Відповідач: ні цей адаптер, ні бібліотека афілійовані Hoymiles.",
+			"zh-cn": "与Hoymiles DTUs和HMS-XXW-2T HMS微反光器的通信,利用外部图书馆的原生电文。 免责声明:这个适配器和图书馆都不隶属于Hoymiles."
+		},
+		"authors": [
+			"MicHi07i <michi07@mein.gmx>"
+		],
+		"keywords": [
+			"Hoymiles",
+			"DTU",
+			"HMS-XXXXW-2T",
+			"HMS-800W-2T"
+		],
+		"licenseInformation": {
+			"type": "free",
+			"license": "MIT"
+		},
+		"platform": "Javascript/Node.js",
+		"icon": "hoymiles-wifi.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/MicHi07i/ioBroker.hoymiles-wifi/master/admin/hoymiles-wifi.png",
+		"readme": "https://github.com/MicHi07i/ioBroker.hoymiles-wifi/blob/master/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "energy",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "json"
+		},
+		"supportCustoms": true,
+		"dependencies": [
+			{
+				"js-controller": ">=6.0.11"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=7.0.23"
+			}
+		]
+	},
+	"native": {
+		"host": "192.168.1.11",
+		"pullInterval": 60,
+		"pull_option": "pull_type0",
+		"PingObject": "ping.0.raspberrypi.192_168_1_11",
+		"Befehlszeile": "hoymiles-wifi --host $host --as-json $option",
+		"Option1": "get-real-data-new",
+		"Option2": "app-get-hist-power",
+		"Option3": "get-real-data",
+		"Option4": "",
+		"Option5": "",
+		"Befehlszeile1": "",
+		"Befehlszeile2": "",
+		"Befehlszeile3": "",
+		"Befehlszeile4": "",
+		"Befehlszeile5": "",
+		"BefehlszeilePowerLimit": "hoymiles-wifi --host $host --disable-interactive --power-limit $option set-power-limit",
+		"BefehlszeileRestart": "hoymiles-wifi --host $host --disable-interactive restart-dtu",
+		"BefehlszeileInverterOn": "hoymiles-wifi --host $host --disable-interactive turn-on-inverter",
+		"BefehlszeileInverterOff": "hoymiles-wifi --host $host --disable-interactive turn-off-inverter",
+		"debugModeEnabled": false
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
 }

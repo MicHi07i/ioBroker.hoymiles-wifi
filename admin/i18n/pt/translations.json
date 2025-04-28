@@ -1,0 +1,14 @@
+{
+	"hoymiles-wifi adapter settings": "Configurações do adaptador para hoymiles-wifi",
+	"host": "host (IP address of Hoymiles HMS)",
+	"pullInterval": "Interval for updating values (in seconds)",
+	"pull_option": "Pause pulling data at night?",
+	"PingObject": "For option 3 - string to object of MHS in PING adapter",
+	"Befehlszeile": "Command line (host and option will be replaced, please do not change this line)",
+	"Option1": "option 1",
+	"Option2": "option 2",
+	"Option3": "option 3",
+	"Option4": "option 4",
+	"Option5": "option 5",
+	"debugModeEnabled": "debug mode"
+}

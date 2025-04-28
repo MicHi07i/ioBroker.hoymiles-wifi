@@ -27,10 +27,14 @@ This Adapter uses the python script from https://github.com/suaveolent/hoymiles-
    $ hoymiles-wifi --host 192.168.1.23 get-real-data
    `. 
    I advise to make sure your password of the access point of the HMS is complex.
-3) Please make sure your PATH variable is set, a softlink in /etc/bin might help. Usage of sudo is not recomended, like 'sudo pip install hoymiles-wifi'. The reason is user ioBroker will execute the command and therefor this user has to find that command.
+3) Please make sure your PATH variable is set for user iobroker, a softlink in /etc/bin might help. Usage of sudo is not recomended, like 'sudo pip install hoymiles-wifi'. The reason is user ioBroker will execute the command and therefor this user has to find that command. Better use `bash
+sudo -H -u iobroker pipx install hoymiles-wifi
+` to install as user iobroker. If path still makes trouble, you might want to change commandline in adater settins from 'hoymiles-wifi --host $host --as-json $option' to something like '/home/iobroker/.local/bin/hoymiles-wifi --host $host --as-json $option'.
 4) Install this adapter in ioBroker, probably by enabling expert mode.
 5) Adjust IP address of your HMS as host. Rest of the default settings should be fine.
 6) At night time the device is powered off and has no IP address. So you can select if you still want to trigger at night time, skip executing command when system command PING is negative or skip executing command when ioBroker adapter PING is negative.
+
+
 
 One option I strongly recomend is 'get-real-data-new':
 hoymiles-wifi.0.get_real_data_new.dtuPower (e.g. value of 6321 means actual 632.1 Watt).
@@ -60,6 +64,8 @@ Feel free to give me feedback.
 * (MicHi07i) considered fixing minor issues detected by repository checker, file io-package.json updates due to language updates.
 ### 0.2.5
 * (MicHi07i) fix on io-package.json. WARNING about zero feed-in (Nulleinspeißung).
+### 0.2.6
+* (MicHi07i) fix: Error404 index.html not found for setup. Redo of Adapter and io-package.json.
 
 
 ## License
