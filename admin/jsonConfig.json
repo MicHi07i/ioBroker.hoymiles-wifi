@@ -5,7 +5,8 @@
 		"host": {
 			"type": "text",
 			"label": "host (IP address of Hoymiles HMS)",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"pullInterval": {
 			"type": "number",
@@ -34,37 +35,44 @@
 		"PingObject": {
 			"type": "text",
 			"label": "For option 3 - string to object of MHS in PING adapter",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Befehlszeile": {
 			"type": "text",
 			"label": "Command line (host and option will be replaced, please do not change this line)",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Option1": {
 			"type": "text",
 			"label": "option 1",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Option2": {
 			"type": "text",
 			"label": "option 2",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Option3": {
 			"type": "text",
 			"label": "option 3",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Option4": {
 			"type": "text",
 			"label": "option 4",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"Option5": {
 			"type": "text",
 			"label": "option 5",
-			"newLine": true
+			"newLine": true,
+			"size": "md"
 		},
 		"debugModeEnabled": {
 			"type": "checkbox",

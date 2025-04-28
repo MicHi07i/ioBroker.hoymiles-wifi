@@ -68,6 +68,19 @@
 			"uk": "Зв'язок з мікроінверторами HMS-XXXXW-2T HMS, використовуючи протобуф повідомлення з зовнішньої бібліотеки. Відповідач: ні цей адаптер, ні бібліотека афілійовані Hoymiles.",
 			"zh-cn": "与Hoymiles DTUs和HMS-XXW-2T HMS微反光器的通信,利用外部图书馆的原生电文。 免责声明:这个适配器和图书馆都不隶属于Hoymiles."
 		},
+		"titleLang": {
+			"en": "Hoymiles WiFi",
+			"de": "Hoymiles WiFi",
+			"ru": "Hoymiles WiFi",
+			"pt": "Hoymiles WiFi",
+			"nl": "Hoymiles WiFi",
+			"fr": "Hoymiles WiFi",
+			"it": "Hoymiles WiFi",
+			"es": "Hoymiles WiFi",
+			"pl": "Hoymiles WiFi",
+			"uk": "Hoymiles WiFi",
+			"zh-cn": "Hoymiles WiFi"
+		},
 		"authors": [
 			"MicHi07i <michi07@mein.gmx>"
 		],
