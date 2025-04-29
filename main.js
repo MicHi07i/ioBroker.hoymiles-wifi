@@ -1,4 +1,4 @@
-// Version 0.2
+// Version 0.2 29.04.2025
 //  Unterstützt mehrere Abfragearten (immer, per ping, oder basierend auf einem ioBroker-Datenpunkt).
 //  Schreibt powerLimit, per command: hoymiles-wifi --host 192.168.1.11 --disable-interactive --power-limit ${newValue} set-power-limit
 //
@@ -33,7 +33,20 @@
 
 const utils = require('@iobroker/adapter-core'); // Get common adapter utils
 const exec = require('child_process').exec;
+const execAsync = require('util').promisify(require('child_process').exec);
 const { spawn } = require('child_process');
+
+function pingHost(host) {
+    return new Promise((resolve, reject) => {
+        exec(`ping -c 1 ${host}`, (error, stdout, stderr) => {
+            if (error) {
+                reject(stderr);  // PING fehlgeschlagen
+            } else {
+                resolve(stdout); // PING erfolgreich
+            }
+        });
+    });
+}
 
 class HoymilesWifi extends utils.Adapter {
     constructor(options) {
@@ -76,6 +89,21 @@ class HoymilesWifi extends utils.Adapter {
 	if (this.config.Option3 != '') { command3 = command0.replace("$option", this.config.Option3); } 
 	if (this.config.Option4 != '') { command4 = command0.replace("$option", this.config.Option4); } 
 	if (this.config.Option5 != '') { command5 = command0.replace("$option", this.config.Option5); } 
+
+	// Extrahiere nur den ausführbaren Teil (alles vor "--host")
+	const commandBase = this.config.Befehlszeile.split('--host')[0].trim();
+
+	// Falls der Base-Teil leer ist, als Fallback "hoymiles-wifi"
+	const binary = commandBase || 'hoymiles-wifi';
+
+	// Rest des Befehls ist fix
+	const fixedArgs = '--host $host --disable-interactive';
+
+	// Zusammensetzen der Kommandos mit dem neuen Binary-Anfang
+	this.config.BefehlszeilePowerLimit = `${binary} ${fixedArgs} --power-limit $option set-power-limit`;
+	this.config.BefehlszeileRestart = `${binary} ${fixedArgs} restart-dtu`;
+	this.config.BefehlszeileInverterOn = `${binary} ${fixedArgs} turn-on-inverter`;
+	this.config.BefehlszeileInverterOff = `${binary} ${fixedArgs} turn-off-inverter`;
 
         this.config.BefehlszeilePowerLimit = this.config.BefehlszeilePowerLimit.replace("$host",host) ||''; // Host ersetzt, aber Option bleibt als Variable um später per Trigger zu setzen.
         this.config.BefehlszeileRestart = this.config.BefehlszeileRestart.replace("$host",host) ||''; // Host ersetzt
@@ -271,25 +299,23 @@ class HoymilesWifi extends utils.Adapter {
           // Püfe Präsenz über Kommandozeilen-Befehl PING
           // Befehl/Programm PING muss per Befehlszeile erreichbar sein, mein Raspberry kann das
           // - sonst nachinstallieren und für user iobroker verfügbar machen
-	  if (this.config.pull_option === 'pull_type1') {
-              exec(`ping -c 1 ${this.config.host}`, (pingError, pingStdout, pingStderr) => {
-                  if (pingError) {
-                     if (this.config.debugModeEnabled) {
-                         this.log.warn(`Host ${this.config.host} is unreachable: ${pingStderr} per PING by option ${this.config.pull_option}`);
-                     }
-                     this.setState('info.connection', false, true);
-                     skippulling = true;
-                     return;
-                  }
-
-                  // Host is reachable, proceed with executing the command
-                  this.setState('info.connection', true, true);
-                  if (this.config.debugModeEnabled) {
-                     this.log.info(`Host ${this.config.host} is reachable by command PING by option ${this.config.pull_option}.`);
-                  }
-                  skippulling = false;
-              });
+          if (this.config.pull_option === 'pull_type1') {
+             try {
+                 await pingHost(this.config.host);
+                 this.setState('info.connection', true, true);
+                 if (this.config.debugModeEnabled) {
+                     this.log.info(`Host ${this.config.host} is reachable by PING (option ${this.config.pull_option}).`);
+                 }
+                 skippulling = false;
+             } catch (error) {
+                 if (this.config.debugModeEnabled) {
+                     this.log.warn(`Host ${this.config.host} is unreachable: ${error} (PING, option ${this.config.pull_option}).`);
+                 }
+                 this.setState('info.connection', false, true);
+                 skippulling = true;
+             }
           }
+
 
           // PING über den Adapter 'PING' im ioBroker abfragen.
           // Vorteil: wenn Befehl PING nicht verfügbar order zuviel Resourcen zieht.
