@@ -1,6 +1,6 @@
 {
   "name": "iobroker.hoymiles-wifi",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Communication with Hoymiles DTUs and the HMS-XXXXW-2T HMS microinverters. Disclaimer: not affiliated with Hoymiles.",
   "author": {
     "name": "MicHi07i",
